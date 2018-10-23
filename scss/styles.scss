@@ -34,19 +34,19 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #80CCF9;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
+$background: #80CCF9;
+$background-alt: #116A9B;
 
 // Define border colors
-$border: #dcd9d9;
+$border: #4C433B;
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
+$heading: #80CCF9;
+$text: #4C433B;
 
 /*
     ---------------------
@@ -154,7 +154,6 @@ header {
 
     ul {
         display: inline-block;
-        background: $background;
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -206,7 +205,7 @@ header {
     position: fixed;
     right: 15px;
     top: 10px;
-    color: $base-color;
+    color: #FFF;
     font-size: 1.5em;
     z-index: 20;
     padding: 0 7px;
@@ -218,12 +217,13 @@ header {
     display: none;
     text-align: right;
     width: 100%;
-    background: $background;
+    background: #80CCF9;
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
     cursor: pointer;
-    color: $base-color;
+    color: white;
+    padding-bottom: 10px;
 
     span {
         font-size: 0.5em;
@@ -290,13 +290,21 @@ footer {
             color: $base-color;
         }
     }
+    p {
+      font-size: .7em;
+      a {
+        display: inline-block;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
 }
 
 .btn-rounded-white {
     display: inline-block;
-    color: #fff;
+    color: $background-alt;;
     padding: 15px 25px;
-    border: 3px solid #fff;
+    border: 3px solid $background-alt;;
     border-radius: 30px;
     @include transition();
 
@@ -350,8 +358,8 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
-    background-size: cover;
+    // background: url(../images/lead-bg.jpg);
+    // background-size: cover;
     padding: 15px;
     overflow: hidden;
 }
@@ -366,10 +374,10 @@ footer {
 
     h1, h2 {
         margin: 0;
+        color: $background-alt;
     }
 
     h1 {
-        color: #fff;
         font-weight: 900;
         font-size: 5em;
         text-transform: uppercase;
@@ -378,7 +386,6 @@ footer {
     }
 
     h2 {
-        color: lighten($base-color, 25%);
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -405,7 +412,7 @@ footer {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #fff;
+    color: $base-color;
 
     span {
         cursor: pointer;
@@ -528,7 +535,7 @@ footer {
         margin: 0 0 15px 0;
     }
 
-    p {
+    p, li {
         color: $text;
         font-size: 0.9em;
         margin: 0;
@@ -567,7 +574,7 @@ footer {
     left: 0;
     top: 10px;
     font-weight: 300;
-    color: #374054;
+    color: #FFF;
 }
 
 /*
@@ -872,7 +879,9 @@ footer {
 
 // Medium Devices
 @media only screen and (max-width : 992px) {
-
+    svg {
+      display: none;
+    }
     #lead {
         height: auto;
         min-height: auto;
@@ -927,6 +936,7 @@ footer {
         box-shadow: none;
         border-radius: 0;
         width: 100%;
+        background: white;
 
         li {
             display: block;
